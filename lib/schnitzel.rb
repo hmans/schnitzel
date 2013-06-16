@@ -1,4 +1,6 @@
+require 'gosu'
 require 'schnitzel/core_ext/array'
+require 'schnitzel/gosu_ext/image'
 require 'schnitzel/window'
 require 'schnitzel/game'
 require 'schnitzel/node'

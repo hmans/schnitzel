@@ -2,7 +2,7 @@ module Schnitzel
   class Sprite < Node
     def initialize(file: nil, **args)
       super(args)
-      @image = Gosu::Image.new($window, file, true)
+      @image = Gosu::Image.from_file(file)
     end
 
     def update
