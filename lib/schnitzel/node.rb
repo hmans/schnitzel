@@ -29,7 +29,13 @@ module Schnitzel
     end
 
     def draw
-      @children.each { |c| c.draw }
+      $window.translate(position.x, position.y) do
+        $window.scale(scale.x, scale.y) do
+          $window.rotate(rotation) do   # probably buggy
+            @children.each { |c| c.draw }
+          end
+        end
+      end
     end
   end
 end
