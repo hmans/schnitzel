@@ -1,6 +1,6 @@
+require 'schnitzel/core_ext/array'
 require 'schnitzel/window'
 require 'schnitzel/game'
-require 'schnitzel/point'
 require 'schnitzel/node'
 require 'schnitzel/actor'
 require 'schnitzel/sprite'
