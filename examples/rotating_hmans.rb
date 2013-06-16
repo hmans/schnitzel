@@ -4,7 +4,7 @@ Bundler.require
 
 class Hmans < Schnitzel::Node
   def setup
-    @sprite = Schnitzel::Sprite.new file: "assets/images/hmans.jpg"
+    @sprite = Schnitzel::Sprite.new file: File.join(__FILE__, '../assets/images/hmans.jpg')
     self << @sprite
   end
 
