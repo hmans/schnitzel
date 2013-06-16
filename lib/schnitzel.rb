@@ -1,4 +1,5 @@
 require 'gosu'
+require 'schnitzel/version'
 require 'schnitzel/core_ext/array'
 require 'schnitzel/gosu_ext/image'
 require 'schnitzel/window'
