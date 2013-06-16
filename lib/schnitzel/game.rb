@@ -40,7 +40,7 @@ module Schnitzel
 
     def update
       newtick = Gosu::milliseconds
-      delta = (@lasttick - newtick) / 1000.0
+      delta = (newtick - @lasttick) / 1000.0
       @scene.update(delta) if @scene
       @lasttick = newtick
     end
