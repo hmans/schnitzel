@@ -5,8 +5,8 @@ require 'bundler/setup'
 Bundler.require
 
 require 'schnitzel'
-require './game/nodes/hmans.rb'
-require './game/scenes/title_scene.rb'
+
+Dir["#{File.dirname(__FILE__)}/game/**/*.rb"].each { |f| require f }
 
 class MyGame < Schnitzel::Game
   def setup
