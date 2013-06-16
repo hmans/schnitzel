@@ -6,7 +6,7 @@ module Schnitzel
       # process. :-)
       #
       $window = Schnitzel::Window.new(640, 480, false)
-      $window.caption = "Untitled Game"
+      #$window.caption = "Untitled Game"
 
       # Also, remember a reference to the game.
       #
@@ -19,6 +19,10 @@ module Schnitzel
       # Invoke setup method.
       #
       setup
+    end
+
+    def title=(v)
+      $window.caption = v
     end
 
     def setup

@@ -1,9 +1,4 @@
 module Schnitzel
-  class Actor
-    def update(dt)
-    end
-
-    def draw
-    end
+  class Actor < Node
   end
 end
