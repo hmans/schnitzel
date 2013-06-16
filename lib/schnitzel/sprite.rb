@@ -5,9 +5,6 @@ module Schnitzel
       @image = Gosu::Image.from_file(file)
     end
 
-    def update
-    end
-
     def draw
       @image.draw_rot position.x, position.y,
         z,
