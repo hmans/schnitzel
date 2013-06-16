@@ -6,13 +6,13 @@ Bundler.require
 
 require 'schnitzel'
 require './game/nodes/hmans.rb'
+require './game/scenes/title_scene.rb'
 
 class MyGame < Schnitzel::Game
   def setup
     enable_pixels
     self.title = "wat?"
-    self << Hmans.new(position: [320, 240], scale: [2.0, 2.0])
   end
 end
 
-MyGame.run!
+MyGame.new.run! TitleScene.new

@@ -32,7 +32,8 @@ module Schnitzel
       Gosu::enable_undocumented_retrofication
     end
 
-    def run!
+    def run!(scene)
+      self << scene
       @lasttick = Gosu::milliseconds
       $window.show
     end
@@ -50,12 +51,6 @@ module Schnitzel
 
     def draw
       @children.each { |c| c.draw }
-    end
-
-    class << self
-      def run!
-        self.new.run!
-      end
     end
   end
 end
