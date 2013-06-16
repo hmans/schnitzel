@@ -12,9 +12,9 @@ module Schnitzel
       #
       $game = self
 
-      # Create some stuff for later.
+      # The current scene.
       #
-      @children = []
+      @scene = nil
 
       # Invoke setup method.
       #
@@ -33,24 +33,20 @@ module Schnitzel
     end
 
     def run!(scene)
-      self << scene
+      @scene = scene
       @lasttick = Gosu::milliseconds
       $window.show
-    end
-
-    def <<(child)
-      @children << child
     end
 
     def update
       newtick = Gosu::milliseconds
       delta = (@lasttick - newtick) / 1000.0
-      @children.each { |c| c.update(delta) }
+      @scene.update(delta) if @scene
       @lasttick = newtick
     end
 
     def draw
-      @children.each { |c| c.draw }
+      @scene.draw if @scene
     end
   end
 end
