@@ -16,9 +16,9 @@ end
 class TitleScene < Schnitzel::Scene
   def setup
     self << Hmans.new(position: [320, 240], scale: [2.0, 2.0])
-    self << Schnitzel::Text.new(text: "ZOMG!", position: [10, 10],
+    self << Schnitzel::ShadowedText.new(text: "ZOMG!", position: [200, 10],
       font: File.join(__FILE__, '../assets/fonts/04b-19.suit'),
-      color: 0xffffffff, size: 100)
+      color: 0xffffffff, shadowcolor: 0xff000000, size: 100)
     self << Schnitzel::FpsCounter.new
   end
 end

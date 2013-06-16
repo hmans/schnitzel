@@ -13,4 +13,16 @@ module Schnitzel
       @font.draw(text, position.x, position.y, z, scale.x, scale.y, color)
     end
   end
+
+  class ShadowedText < Text
+    def initialize(shadowcolor: 0x88000000, **args)
+      super(args)
+      @shadowcolor = shadowcolor
+    end
+
+    def draw
+      @font.draw(text, position.x + 5, position.y + 5, z, scale.x, scale.y, @shadowcolor)
+      super
+    end
+  end
 end
