@@ -1,15 +1,16 @@
 module Schnitzel
   class Text < Node
-    attr_accessor :color
+    attr_accessor :color, :text
 
-    def initialize(color: 0xffffffff, size: 20, **args)
+    def initialize(text: "", color: 0xffffffff, size: 20, **args)
       super(args)
+      @text = text
       @color = color
       @font = Gosu::Font.new($window, Gosu::default_font_name, size)
     end
 
     def draw
-      @font.draw("Woohoo!", position.x, position.y, z, scale.x, scale.y, color)
+      @font.draw(text, position.x, position.y, z, scale.x, scale.y, color)
     end
   end
 end
