@@ -16,7 +16,8 @@ end
 class TitleScene < Schnitzel::Scene
   def setup
     self << Hmans.new(position: [320, 240], scale: [2.0, 2.0])
-    self << Schnitzel::Text.new(position: [10, 10], color: 0xccffffff, size: 50)
+    self << Schnitzel::Text.new(text: "ZOMG!", position: [10, 10], color: 0xccffffff, size: 50)
+    self << Schnitzel::FpsCounter.new
   end
 end
 
