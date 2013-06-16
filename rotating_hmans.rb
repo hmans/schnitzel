@@ -1,12 +1,6 @@
 #!/usr/bin/env ruby
-
-# Load all the crazy stuff we need.
 require 'bundler/setup'
 Bundler.require
-$:.unshift File.join(File.dirname(__FILE__), '/lib')
-require 'schnitzel'
-
-
 
 class Hmans < Schnitzel::Node
   def setup
