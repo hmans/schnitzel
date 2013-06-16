@@ -5,7 +5,7 @@ require 'bundler/setup'
 Bundler.require
 
 require 'schnitzel'
-require './game/actors/hmans.rb'
+require './game/nodes/hmans.rb'
 
 class MyGame < Schnitzel::Game
   def setup

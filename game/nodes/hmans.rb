@@ -1,4 +1,4 @@
-class Hmans < Schnitzel::Actor
+class Hmans < Schnitzel::Node
   def setup
     @sprite = Schnitzel::Sprite.new file: "assets/images/hmans.jpg"
     self << @sprite
