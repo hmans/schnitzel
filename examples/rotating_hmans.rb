@@ -5,11 +5,18 @@ Bundler.require
 class Hmans < Schnitzel::Node
   def setup
     @sprite = Schnitzel::Sprite.new file: File.join(__FILE__, '../assets/images/hmans.jpg')
+    @font = Gosu::Font.new($window, Gosu::default_font_name, 20)
     self << @sprite
   end
 
   def update(dt)
+    super
     @sprite.rotation += 90.0 * dt
+  end
+
+  def draw
+    super
+    @font.draw("Woohoo!", 10, 10, 666, 1.0, 1.0, 0xccffffff)
   end
 end
 
